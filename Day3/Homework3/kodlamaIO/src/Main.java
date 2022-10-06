@@ -5,7 +5,6 @@ import core.logging.DatabaseLogger;
 import core.logging.FileLogger;
 import core.logging.Logger;
 import core.logging.MailLogger;
-import core.valid.CourseValidator;
 import dataAccess.HibernateCategoryDao;
 import dataAccess.HibernateCourseDao;
 import dataAccess.JdbcInstructorDao;
