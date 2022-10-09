@@ -10,6 +10,7 @@ public class CategoryValidator {
                 throw new Exception("This category name is already registered in the system. Cannot be re-registered");
             }
         }
+        categories.add(category);
 
     }
 }

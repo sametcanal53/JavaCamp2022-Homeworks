@@ -8,19 +8,16 @@ import entities.Course;
 import java.util.List;
 
 public class CourseManager {
-    private List<Course> courses;
     private CourseDao courseDao;
     private Logger[] loggers;
 
-    public CourseManager(List<Course> courses,CourseDao courseDao, Logger[] loggers) {
-        this.courses = courses;
+    public CourseManager(CourseDao courseDao, Logger[] loggers) {
         this.courseDao = courseDao;
         this.loggers = loggers;
     }
 
-    public void add(Course course) throws Exception {
+    public void add(List<Course> courses,Course course) throws Exception {
         CourseValidator.isUniqueAndIsCoursePriceNegative(courses,course);
-        this.courses.add(course);
         this.courseDao.add(course);
 
         for(Logger logger : loggers){
@@ -30,7 +27,6 @@ public class CourseManager {
 
     public void update(Course course) throws Exception {
         CourseValidator.isCoursePriceNegative(course);
-        this.courses.add(course);
         this.courseDao.update(course);
 
         for(Logger logger : loggers){

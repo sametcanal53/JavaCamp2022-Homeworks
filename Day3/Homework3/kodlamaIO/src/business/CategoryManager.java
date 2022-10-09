@@ -8,19 +8,16 @@ import entities.Category;
 import java.util.List;
 
 public class CategoryManager {
-    private List<Category> categories;
     private CategoryDao categoryDao;
     private Logger[] loggers;
 
-    public CategoryManager(List<Category> categories,CategoryDao categoryDao, Logger[] loggers) {
-        this.categories = categories;
+    public CategoryManager(CategoryDao categoryDao, Logger[] loggers) {
         this.categoryDao = categoryDao;
         this.loggers = loggers;
     }
 
-    public void add(Category category) throws Exception {
+    public void add(List<Category> categories,Category category) throws Exception {
         CategoryValidator.isUnique(categories,category);
-        this.categories.add(category);
         this.categoryDao.add(category);
         for (Logger logger : loggers) {
             logger.log(category.getCategoryName());

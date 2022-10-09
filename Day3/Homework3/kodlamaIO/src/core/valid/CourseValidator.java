@@ -19,5 +19,6 @@ public class CourseValidator{
                 throw new Exception("This course name is already registered in the system. Cannot be re-registered");
             }
         }
+        courses.add(course);
     }
 }

@@ -28,9 +28,9 @@ public class Main {
 
         Category category = new Category("Category 1");
         List<Category> categories = new ArrayList<>();
-        CategoryManager categoryManager = new CategoryManager(categories,new HibernateCategoryDao(),loggers);
-        categoryManager.add(category);
-        //categoryManager.add(category);
+        CategoryManager categoryManager = new CategoryManager(new HibernateCategoryDao(),loggers);
+        categoryManager.add(categories,category);
+        //categoryManager.add(categories,category);
         category.setCategoryName("Category 2");
         categoryManager.delete(category);
         System.out.println();
@@ -38,10 +38,10 @@ public class Main {
         Course course1 = new Course("(2022) Yazilim Gelistirici Yetistirme Kampi - Java",5,category,instructor);
         Course course2 = new Course("Programlamaya Giris icin Temel Kurs",5,category,instructor);
         List<Course> courses = new ArrayList<>();
-        CourseManager courseManager = new CourseManager(courses,new HibernateCourseDao(),loggers);
-        courseManager.add(course1);
-        courseManager.add(course2);
-        //courseManager.add(course1);
+        CourseManager courseManager = new CourseManager(new HibernateCourseDao(),loggers);
+        courseManager.add(courses,course1);
+        courseManager.add(courses,course2);
+        //courseManager.add(courses,course1);
         course1.setCourseName("Senior Yazilim Gelistirici Yetistirme Kampi (.NET)");
         //course1.setPrice(-5);
         courseManager.update(course1);
