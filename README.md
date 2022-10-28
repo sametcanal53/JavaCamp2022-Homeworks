@@ -6,4 +6,7 @@ Alttaki linklerden kamp boyunca yapılacak tüm ödevlere ulaşabilirsiniz.
     - [2.Ödev](https://github.com/sametcanal53/JavaCamp2022-Homeworks/tree/master/Day2/Homework2)
 - [3. Gün ](https://github.com/sametcanal53/JavaCamp2022-Homeworks/tree/master/Day3)
     - [2.Ödev](https://github.com/sametcanal53/JavaCamp2022-Homeworks/tree/master/Day3/Homework2)   
-    - [3.Ödev](https://github.com/sametcanal53/JavaCamp2022-Homeworks/tree/master/Day3/Homework3)   
+    - [3.Ödev](https://github.com/sametcanal53/JavaCamp2022-Homeworks/tree/master/Day3/Homework3) 
+- [4. Gün ](https://github.com/sametcanal53/JavaCamp2022-Homeworks/tree/master/Day4)
+    - [1.Ödev](https://github.com/sametcanal53/JavaCamp2022-Homeworks/tree/master/Day4/Homework1)
+    
